@@ -151,14 +151,26 @@ namespace StarWar_V1._0_byNHS
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
-        }
+        }   
         /// <summary>
         /// Load moi asteroid vi moi thien thach co vi tri khac nhau theo rank, nen can phai load lai va cho vao list
         /// </summary>
         Random rank = new Random();
         public void LoadAsteroid()
         {
-
+            //remove astoroid neu no chay het man hinh GUI, neu k remove astoroid se chay mai khong add them duoc
+            if (listAstoroid!=null)
+            {
+                for (int i = 0; i < listAstoroid.Count(); i++)
+                {
+                    if (listAstoroid[i].position.Y>ThamSo.WindownHeight+10)
+                    {
+                        listAstoroid.RemoveAt(i);
+                        //luc nay so luong i se giam di i;
+                        i--;
+                    }
+                }
+            }
             int rankx = rank.Next(0, ThamSo.WindowWidth);
             int ranky = rank.Next(-ThamSo.WindownHeight / 2,-50);
             Asteroid temp = new Asteroid(Content.Load<Texture2D>("asteroid"),new Vector2(rankx,ranky));

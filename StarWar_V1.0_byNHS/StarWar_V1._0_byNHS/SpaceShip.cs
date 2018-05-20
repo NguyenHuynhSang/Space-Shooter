@@ -62,7 +62,7 @@ namespace StarWar_V1._0_byNHS
             //ve phi truyen ra GUI
             for (int i = 0; i < life; i++)
             {
-                lifeKhungHinh = new Rectangle(50 + (i * 100), 10, 40, 40);
+                lifeKhungHinh = new Rectangle(50 + (i * 50), 10, 40, 40);
                 spriteBatch.Draw(lifeTexture, lifeKhungHinh, Color.White);
             }
             
@@ -136,7 +136,7 @@ namespace StarWar_V1._0_byNHS
             {
                
                 ThamSo.TocDoLoadMap ++;
-                if (ThamSo.TocDoLoadMap>8)
+                if (ThamSo.TocDoLoadMap > 8)
                 {
                     ThamSo.TocDoLoadMap = 8;
                 }
