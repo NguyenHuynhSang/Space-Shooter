@@ -16,21 +16,25 @@ namespace StarWar_V1._0_byNHS
         public SoundEffect bulletSound;
         public SoundEffect asteroidexplosion;
         public Song bgMusic;
-
-
+        public SoundEffect ebulletSound;
+        public SoundEffect getshooted;
         //contructer
 
         public SoundManager()
         {
             bulletSound = null;
             bgMusic = null;
+            ebulletSound = null;
+            asteroidexplosion = null;
         }
 
         
         public void LoadContent(ContentManager _content)
         {
             bulletSound = _content.Load<SoundEffect>("bulletsound");
+            ebulletSound = _content.Load<SoundEffect>("3");
             asteroidexplosion = _content.Load<SoundEffect>("4");
+            getshooted= _content.Load<SoundEffect>("5");
             bgMusic = _content.Load<Song>("lactroi");
         }
 

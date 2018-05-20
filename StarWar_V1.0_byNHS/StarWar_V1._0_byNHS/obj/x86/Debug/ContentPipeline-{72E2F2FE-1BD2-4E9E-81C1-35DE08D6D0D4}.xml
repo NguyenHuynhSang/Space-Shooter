@@ -92,6 +92,42 @@
       <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\4.xnb</Output>
       <Time>2018-05-20T16:11:31.6738257+07:00</Time>
     </Item>
+    <Item>
+      <Source>enermyship.png</Source>
+      <Name>enermyship</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\enermyship.xnb</Output>
+      <Time>2018-05-20T19:11:38.2857677+07:00</Time>
+    </Item>
+    <Item>
+      <Source>ebullet.png</Source>
+      <Name>ebullet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\ebullet.xnb</Output>
+      <Time>2018-05-20T19:45:32.3488558+07:00</Time>
+    </Item>
+    <Item>
+      <Source>3.wav</Source>
+      <Name>3</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\3.xnb</Output>
+      <Time>2018-05-20T19:51:45.4288546+07:00</Time>
+    </Item>
+    <Item>
+      <Source>5.wav</Source>
+      <Name>5</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\5.xnb</Output>
+      <Time>2018-05-20T20:03:53.9872922+07:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{72E2F2FE-1BD2-4E9E-81C1-35DE08D6D0D4}</ContentProjectGUID>

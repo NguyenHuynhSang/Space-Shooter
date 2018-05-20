@@ -58,7 +58,7 @@ namespace StarWar_V1._0_byNHS
 
         public void Update(GameTime gametime)
         {
-            speed = ThamSo.TocDoLoadMap + 5;
+            speed = ThamSo.TocDoLoadMap;
             KhungHinh = new Rectangle((int)position.X, (int)position.Y, texture.Width/4, texture.Height/4);
             position.Y+=speed;
             if (position.Y==ThamSo.WindownHeight)

@@ -98,11 +98,32 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
     </Compile>
-    <Content Include="asexplosion.wav">
-      <Name>asexplosion</Name>
+    <Compile Include="enermyship.png">
+      <Name>enermyship</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ebullet.png">
+      <Name>ebullet</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="3.wav">
+      <Name>3</Name>
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
-    </Content>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="5.wav">
+      <Name>5</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
   <!--  To modify your build process, add your task inside one of the targets below and uncomment it. 

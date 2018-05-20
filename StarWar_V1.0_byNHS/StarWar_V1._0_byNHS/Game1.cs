@@ -25,6 +25,7 @@ namespace StarWar_V1._0_byNHS
         SpaceShip myShip = new SpaceShip();
         Map gameMap = new Map();
         List<Asteroid> listAstoroid = new List<Asteroid>();
+        List<Enermy> listEnermy = new List<Enermy>();
         SoundManager sm = new SoundManager();
 
         //constructor mac dinh
@@ -71,7 +72,7 @@ namespace StarWar_V1._0_byNHS
             spriteBatch = new SpriteBatch(GraphicsDevice);
             //tai len content cua spaceship neu khong textual se la null=> khong draw duoc  
             myShip.LoadContent(Content);
-        
+         
             gameMap.LoadContent(Content);
             sm.LoadContent(Content);
             MediaPlayer.Play(sm.bgMusic);
@@ -123,12 +124,47 @@ namespace StarWar_V1._0_byNHS
                     }
                 }
             }
-            
+
+            LoadEnermy();
+            //xu ly va cham giua enermy va spaceship
+            foreach (Enermy e in listEnermy)
+            {
+                if (e.KhungHinh.Intersects(myShip.KhungHinh))
+                {
+                    e.isVisable = false;
+                    myShip.life--;
+                    sm.asteroidexplosion.Play();
+                }
+                // xu ly va cham giua enermy bullet va spaceship 
+                for (int i = 0; i <e.dsBullet.Count ; i++)
+                {
+                    if (myShip.KhungHinh.Intersects(e.dsBullet[i].KhungHinh))
+                    {
+                        myShip.life--;
+                        e.dsBullet[i].isVisible = false;
+                        sm.getshooted.Play();
+                    }
+                }
+                //xy ly va cham giua spaceship va enermy
+                for (int i = 0; i < myShip.bulletList.Count(); i++)
+                {
+                    if (myShip.bulletList[i].KhungHinh.Intersects(e.KhungHinh))
+                    {
+                        myShip.bulletList[i].isVisible = false;
+                        e.isVisable = false;
+                        sm.getshooted.Play();
+                    }
+                }
+                e.Update(gameTime);
+            }
+           
 
             // TODO: Add your update logic here
             myShip.Update(gameTime);
            
             gameMap.Update(gameTime);
+
+         
             base.Update(gameTime);
         }
 
@@ -145,6 +181,11 @@ namespace StarWar_V1._0_byNHS
             foreach (Asteroid a in listAstoroid)
             {
                 a.Draw(spriteBatch);
+            }
+
+            foreach (Enermy e in listEnermy)
+            {
+                e.Draw(spriteBatch);
             }
             spriteBatch.End();
             
@@ -188,6 +229,48 @@ namespace StarWar_V1._0_byNHS
                 if (!listAstoroid[i].isVisable)
                 {
                     listAstoroid.RemoveAt(i);
+                    //luc nay so luong i se giam di i;
+                    i--;
+                }
+
+            }
+        }
+
+        //load enermies
+        public void LoadEnermy()
+        {
+            //remove astoroid neu no chay het man hinh GUI, neu k remove astoroid se chay mai khong add them duoc
+            //if (listAstoroid != null)
+            //{
+            //    for (int i = 0; i < listAstoroid.Count(); i++)
+            //    {
+            //        if (listAstoroid[i].position.Y > ThamSo.WindownHeight + 10)
+            //        {
+            //            listAstoroid.RemoveAt(i);
+            //            //luc nay so luong i se giam di i;
+            //            i--;
+            //        }
+            //    }
+            //}
+            int rankx = rank.Next(0, ThamSo.WindowWidth);
+            int ranky = rank.Next(-ThamSo.WindownHeight / 2, -50);
+
+
+            Enermy temp = new Enermy(Content.Load<Texture2D>("enermyship"),new Vector2(rankx,ranky),Content.Load<Texture2D>("ebullet"));
+
+            // so luong asto
+            if (listEnermy.Count() < ThamSo.SoluongEnermy)
+            {
+                listEnermy.Add(temp);
+            }
+
+            // remove astoroid khi va cham , trung dan ...
+
+            for (int i = 0; i < listEnermy.Count(); i++)
+            {
+                if (!listEnermy[i].isVisable)
+                {
+                    listEnermy.RemoveAt(i);
                     //luc nay so luong i se giam di i;
                     i--;
                 }

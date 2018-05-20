@@ -9,3 +9,7 @@ Content\lactroi.wma
 Content\asteroid.xnb
 Content\heart.xnb
 Content\4.xnb
+Content\enermyship.xnb
+Content\ebullet.xnb
+Content\3.xnb
+Content\5.xnb

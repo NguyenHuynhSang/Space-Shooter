@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
+    using Microsoft.Xna.Framework;
+    using Microsoft.Xna.Framework.Content;
+    using Microsoft.Xna.Framework.Graphics;
+    using Microsoft.Xna.Framework.Input;
 namespace StarWar_V1._0_byNHS
 {
     public class SpaceShip
@@ -35,7 +35,7 @@ namespace StarWar_V1._0_byNHS
         {
             bulletList = new List<Bullet>();
             _texture = null;
-            bulletDelay = 15;
+            bulletDelay = 1;
             // set vi tri mat dinh cua spaceship
             vitri = new Vector2(300,600);
             TocDo = 10;
@@ -62,7 +62,7 @@ namespace StarWar_V1._0_byNHS
             //ve phi truyen ra GUI
             for (int i = 0; i < life; i++)
             {
-                lifeKhungHinh = new Rectangle(50 + (i * 50), 10, 40, 40);
+                lifeKhungHinh = new Rectangle(50 + (i * 50), 5, 40, 40);
                 spriteBatch.Draw(lifeTexture, lifeKhungHinh, Color.White);
             }
             
@@ -73,7 +73,7 @@ namespace StarWar_V1._0_byNHS
             }
 
         }
-       // sua loi ship bi delay khi nguoi dung nhan phim, hoac phim va ch   uot cung luc
+       // sua loi ship bi delay khi nguoi dung nhan phim, hoac phim va chuot cung luc
         bool Moflag = false;
         // Update
         public void Update(GameTime gameTime)
@@ -89,7 +89,9 @@ namespace StarWar_V1._0_byNHS
             //shoot bullet
             if (keystate.IsKeyDown(Keys.Space)||ms.LeftButton==ButtonState.Pressed)
             {
+                
                 Shoot();
+               
             }
         
             updateBullet();
@@ -178,6 +180,7 @@ namespace StarWar_V1._0_byNHS
             {
                 bulletDelay--;
             }
+           
             if (bulletDelay<=0)
             {
                 sound.bulletSound.Play();
@@ -190,7 +193,7 @@ namespace StarWar_V1._0_byNHS
                     bulletList.Add(newBullet);
                 }
             }
-            if (bulletDelay==0)
+            if (bulletDelay == 0)
             {
                 bulletDelay = 15;
             }

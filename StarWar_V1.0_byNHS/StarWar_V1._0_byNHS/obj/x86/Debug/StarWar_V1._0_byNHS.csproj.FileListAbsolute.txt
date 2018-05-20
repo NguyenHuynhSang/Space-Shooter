@@ -49,3 +49,7 @@ D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\obj\x86\Debug\StarWar_
 D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\asteroid.xnb
 D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\heart.xnb
 D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\4.xnb
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\enermyship.xnb
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\ebullet.xnb
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\3.xnb
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\5.xnb
