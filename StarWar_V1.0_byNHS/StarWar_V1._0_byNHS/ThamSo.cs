@@ -11,5 +11,7 @@ namespace StarWar_V1._0_byNHS
         public static int WindownHeight = 900;
         public static int WindowWidth = 900;
         public static int TocDoLoadMap=5;
+
+        public static int SoluongAsteroid = 8;
     }
 }

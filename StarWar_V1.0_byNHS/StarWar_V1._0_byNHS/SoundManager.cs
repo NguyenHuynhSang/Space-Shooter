@@ -14,6 +14,7 @@ namespace StarWar_V1._0_byNHS
     public class SoundManager
     {
         public SoundEffect bulletSound;
+        public SoundEffect asteroidexplosion;
         public Song bgMusic;
 
 
@@ -29,6 +30,7 @@ namespace StarWar_V1._0_byNHS
         public void LoadContent(ContentManager _content)
         {
             bulletSound = _content.Load<SoundEffect>("bulletsound");
+            asteroidexplosion = _content.Load<SoundEffect>("4");
             bgMusic = _content.Load<Song>("lactroi");
         }
 

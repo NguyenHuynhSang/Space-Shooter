@@ -21,10 +21,10 @@ namespace StarWar_V1._0_byNHS
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        /// //Khoi tao spaceship,enemy,map...
+        /// //Khoi tao cac doi tuong trong game such as ship, map, astoroid...ect
         SpaceShip myShip = new SpaceShip();
         Map gameMap = new Map();
-
+        List<Asteroid> listAstoroid = new List<Asteroid>();
         SoundManager sm = new SoundManager();
 
         //constructor mac dinh
@@ -71,6 +71,7 @@ namespace StarWar_V1._0_byNHS
             spriteBatch = new SpriteBatch(GraphicsDevice);
             //tai len content cua spaceship neu khong textual se la null=> khong draw duoc  
             myShip.LoadContent(Content);
+        
             gameMap.LoadContent(Content);
             sm.LoadContent(Content);
             MediaPlayer.Play(sm.bgMusic);
@@ -97,8 +98,36 @@ namespace StarWar_V1._0_byNHS
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+            //Cap nhat moi thien thach trong danh sach
+            foreach (Asteroid a in listAstoroid)
+            {
+                a.Update(gameTime);
+            }
+            LoadAsteroid();
+            //xy ly va cham ship,bullet va asteroid
+            foreach (Asteroid item in listAstoroid)
+            {
+                if (item.KhungHinh.Intersects(myShip.KhungHinh))
+                {
+                    item.isVisable = false;
+                    sm.asteroidexplosion.Play();
+                    myShip.life--;
+                }
+                for (int i = 0; i < myShip.bulletList.Count(); i++)
+                {
+                    if (item.KhungHinh.Intersects(myShip.bulletList[i].KhungHinh))
+                    {
+                        item.isVisable = false;
+                        myShip.bulletList[i].isVisible = false;
+                        sm.asteroidexplosion.Play(); 
+                    }
+                }
+            }
+            
+
             // TODO: Add your update logic here
             myShip.Update(gameTime);
+           
             gameMap.Update(gameTime);
             base.Update(gameTime);
         }
@@ -113,12 +142,45 @@ namespace StarWar_V1._0_byNHS
             spriteBatch.Begin();
             gameMap.Draw(spriteBatch);
             myShip.Draw(spriteBatch);
-           
+            foreach (Asteroid a in listAstoroid)
+            {
+                a.Draw(spriteBatch);
+            }
             spriteBatch.End();
             
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
+        }
+        /// <summary>
+        /// Load moi asteroid vi moi thien thach co vi tri khac nhau theo rank, nen can phai load lai va cho vao list
+        /// </summary>
+        Random rank = new Random();
+        public void LoadAsteroid()
+        {
+
+            int rankx = rank.Next(0, ThamSo.WindowWidth);
+            int ranky = rank.Next(-ThamSo.WindownHeight / 2,-50);
+            Asteroid temp = new Asteroid(Content.Load<Texture2D>("asteroid"),new Vector2(rankx,ranky));
+            
+            // so luong asto
+            if (listAstoroid.Count()<ThamSo.SoluongAsteroid)
+            {
+                listAstoroid.Add(temp);
+            }
+
+            // remove astoroid khi va cham , trung dan ...
+          
+            for (int i = 0; i < listAstoroid.Count(); i++)
+            {
+                if (!listAstoroid[i].isVisable)
+                {
+                    listAstoroid.RemoveAt(i);
+                    //luc nay so luong i se giam di i;
+                    i--;
+                }
+
+            }
         }
     }
 }

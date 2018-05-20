@@ -22,3 +22,30 @@ D:\my code\C#\StarWar_V1.0_byNHS\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\
 D:\my code\C#\StarWar_V1.0_byNHS\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\bulletsound.xnb
 D:\my code\C#\StarWar_V1.0_byNHS\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\lactroi.xnb
 D:\my code\C#\StarWar_V1.0_byNHS\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\lactroi.wma
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\spaceship2.xnb
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\spaceship1.xnb
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\spaceship.xnb
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\space.xnb
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\bullet.xnb
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\bulletsound.xnb
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\lactroi.xnb
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\lactroi.wma
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\StarWar_V1._0_byNHS.exe
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\StarWar_V1._0_byNHS.pdb
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Microsoft.Xna.Framework.dll
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Microsoft.Xna.Framework.Game.dll
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.dll
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.dll
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.dll
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Microsoft.Xna.Framework.xml
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Microsoft.Xna.Framework.Game.xml
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Microsoft.Xna.Framework.Graphics.xml
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Microsoft.Xna.Framework.GamerServices.xml
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Microsoft.Xna.Framework.Input.Touch.xml
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\obj\x86\Debug\StarWar_V1._0_byNHS.csprojResolveAssemblyReference.cache
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\obj\x86\Debug\StarWar_V1._0_byNHS.exe
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\obj\x86\Debug\StarWar_V1._0_byNHS.pdb
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\asteroid.xnb
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\heart.xnb
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\4.xnb

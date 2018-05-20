@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\my code\C#\StarWar_V1.0_byNHS\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\spaceship2.xnb</Output>
+      <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\spaceship2.xnb</Output>
       <Time>2018-05-17T12:15:10.7374684+07:00</Time>
     </Item>
     <Item>
@@ -16,8 +16,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\my code\C#\StarWar_V1.0_byNHS\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\spaceship1.xnb</Output>
-      <Time>2018-05-17T12:29:05.2174767+07:00</Time>
+      <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\spaceship1.xnb</Output>
+      <Time>2018-05-20T14:15:36.9179538+07:00</Time>
     </Item>
     <Item>
       <Source>spaceship.png</Source>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\my code\C#\StarWar_V1.0_byNHS\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\spaceship.xnb</Output>
-      <Time>2018-05-17T12:31:01.6787372+07:00</Time>
+      <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\spaceship.xnb</Output>
+      <Time>2018-05-20T14:17:54.3681207+07:00</Time>
     </Item>
     <Item>
       <Source>space.png</Source>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\my code\C#\StarWar_V1.0_byNHS\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\space.xnb</Output>
+      <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\space.xnb</Output>
       <Time>2018-05-17T14:01:31.1136751+07:00</Time>
     </Item>
     <Item>
@@ -43,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\my code\C#\StarWar_V1.0_byNHS\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\bullet.xnb</Output>
+      <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\bullet.xnb</Output>
       <Time>2018-05-17T14:56:31.8215776+07:00</Time>
     </Item>
     <Item>
@@ -52,7 +52,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\my code\C#\StarWar_V1.0_byNHS\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\bulletsound.xnb</Output>
+      <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\bulletsound.xnb</Output>
       <Time>2018-05-17T16:59:17.3788903+07:00</Time>
     </Item>
     <Item>
@@ -61,9 +61,36 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\my code\C#\StarWar_V1.0_byNHS\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\lactroi.xnb</Output>
-      <Extra>D:\my code\C#\StarWar_V1.0_byNHS\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\lactroi.wma</Extra>
+      <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\lactroi.xnb</Output>
+      <Extra>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\lactroi.wma</Extra>
       <Time>2018-05-17T18:35:01.0436722+07:00</Time>
+    </Item>
+    <Item>
+      <Source>asteroid.png</Source>
+      <Name>asteroid</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\asteroid.xnb</Output>
+      <Time>2018-05-20T14:14:59.8022101+07:00</Time>
+    </Item>
+    <Item>
+      <Source>heart.png</Source>
+      <Name>heart</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\heart.xnb</Output>
+      <Time>2018-05-20T14:38:16.1161907+07:00</Time>
+    </Item>
+    <Item>
+      <Source>4.wav</Source>
+      <Name>4</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\4.xnb</Output>
+      <Time>2018-05-20T16:11:31.6738257+07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -72,10 +99,10 @@
       <TargetProfile>Reach</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>D:\my code\C#\StarWar_V1.0_byNHS\StarWar_V1.0_byNHS\StarWar_V1._0_byNHSContent\</RootDirectory>
-      <LoggerRootDirectory>D:\my code\C#\StarWar_V1.0_byNHS\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\</LoggerRootDirectory>
-      <IntermediateDirectory>D:\my code\C#\StarWar_V1.0_byNHS\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>D:\my code\C#\StarWar_V1.0_byNHS\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHSContent\</RootDirectory>
+      <LoggerRootDirectory>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\</LoggerRootDirectory>
+      <IntermediateDirectory>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

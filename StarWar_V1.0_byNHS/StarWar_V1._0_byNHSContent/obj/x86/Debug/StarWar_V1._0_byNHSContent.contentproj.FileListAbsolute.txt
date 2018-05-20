@@ -1,1 +1,2 @@
 D:\my code\C#\StarWar_V1.0_byNHS\StarWar_V1.0_byNHS\StarWar_V1._0_byNHSContent\obj\x86\Debug\StarWar_V1._0_byNHSContent.contentprojResolveAssemblyReference.cache
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHSContent\obj\x86\Debug\StarWar_V1._0_byNHSContent.contentprojResolveAssemblyReference.cache

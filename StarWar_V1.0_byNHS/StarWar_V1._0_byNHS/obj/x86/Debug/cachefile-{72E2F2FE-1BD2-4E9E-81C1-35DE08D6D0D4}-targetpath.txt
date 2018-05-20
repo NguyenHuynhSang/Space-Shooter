@@ -6,3 +6,6 @@ Content\bullet.xnb
 Content\bulletsound.xnb
 Content\lactroi.xnb
 Content\lactroi.wma
+Content\asteroid.xnb
+Content\heart.xnb
+Content\4.xnb

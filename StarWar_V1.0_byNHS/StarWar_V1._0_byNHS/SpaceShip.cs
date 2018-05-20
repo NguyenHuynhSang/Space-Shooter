@@ -11,7 +11,8 @@ namespace StarWar_V1._0_byNHS
     public class SpaceShip
     {
         //Dinh nghia player can gi
-        public Texture2D _texture,bulletTexture;
+        public Texture2D _texture,bulletTexture,lifeTexture;
+        public int life;
        
         public float bulletDelay;
         public List<Bullet> bulletList;
@@ -25,22 +26,21 @@ namespace StarWar_V1._0_byNHS
         public Point lastMouse;
         public int texturesOriginalWidth=100;
         public int texturesOriginalHeight=100;
-        private bool usingKeyBoard=false;
         // co hieu khi xet va cham va khung hinh khi ve len GUI xet va cham khi cac khung hinh chong cheo len nhau
         public bool isVaCham;
-        public Rectangle KhungHinh;
+        public Rectangle KhungHinh,lifeKhungHinh;
 
         // Khoi tao mac dinh 1 spaceship
         public SpaceShip()
         {
             bulletList = new List<Bullet>();
             _texture = null;
-            bulletDelay = 10;
+            bulletDelay = 15;
             // set vi tri mat dinh cua spaceship
             vitri = new Vector2(300,600);
             TocDo = 10;
             isVaCham = false;
-           
+            life = 3;
         }
 
         //load content
@@ -51,6 +51,7 @@ namespace StarWar_V1._0_byNHS
 
             _texture = _content.Load<Texture2D>("spaceship");
             bulletTexture = _content.Load<Texture2D>("bullet");
+            lifeTexture = _content.Load<Texture2D>("heart");
             sound.LoadContent(_content);
 
         }
@@ -59,8 +60,12 @@ namespace StarWar_V1._0_byNHS
         public void Draw(SpriteBatch spriteBatch)
         {
             //ve phi truyen ra GUI
-            KhungHinh = new Rectangle((int)vitri.X, (int)vitri.Y, texturesOriginalHeight, texturesOriginalWidth);
-
+            for (int i = 0; i < life; i++)
+            {
+                lifeKhungHinh = new Rectangle(50 + (i * 100), 10, 40, 40);
+                spriteBatch.Draw(lifeTexture, lifeKhungHinh, Color.White);
+            }
+            
             spriteBatch.Draw(_texture,KhungHinh, Color.White);
             foreach (Bullet item in bulletList)
             {
@@ -68,11 +73,15 @@ namespace StarWar_V1._0_byNHS
             }
 
         }
+       // sua loi ship bi delay khi nguoi dung nhan phim, hoac phim va ch   uot cung luc
+        bool Moflag = false;
         // Update
-        
         public void Update(GameTime gameTime)
         {
            
+            
+            KhungHinh = new Rectangle((int)vitri.X, (int)vitri.Y, _texture.Width/5+5, _texture.Height/5+5);
+            Moflag = false;
             MouseState ms = Mouse.GetState();
             
             //getting keyboard state every frame
@@ -91,9 +100,9 @@ namespace StarWar_V1._0_byNHS
             // ship controls
             if (keystate.IsKeyDown(Keys.W))
             {
-                vitri.Y -= TocDo;
+                vitri.Y -= TocDo;              
                 Mouse.SetPosition((int)vitri.X, (int)vitri.Y);
-                usingKeyBoard = true;
+                Moflag = true;
             }
 
             
@@ -105,6 +114,7 @@ namespace StarWar_V1._0_byNHS
                 Mouse.SetPosition((int)vitri.X, (int)vitri.Y);
                 //de cai nay` dung uc che qua
                 //ThamSo.TocDoLoadMap = 3;
+                Moflag = true;
 
             }
          
@@ -113,12 +123,14 @@ namespace StarWar_V1._0_byNHS
              
                 vitri.X -= TocDo;
                 Mouse.SetPosition((int)vitri.X, (int)vitri.Y);
+                Moflag = true;
             }
             if (keystate.IsKeyDown(Keys.D))
             {
                
                 vitri.X += TocDo;
                 Mouse.SetPosition((int)vitri.X, (int)vitri.Y);
+                      Moflag = true;
             }
             if (keystate.IsKeyDown(Keys.LeftShift)||ms.RightButton==ButtonState.Pressed)
             {
@@ -135,9 +147,13 @@ namespace StarWar_V1._0_byNHS
                 ThamSo.TocDoLoadMap = 5;
             }
 
-         //set vi tri spaceship khi re chuot
+            //set vi tri spaceship khi re chuot
+            if (Moflag==false)
+            {
                 vitri.X = ms.X;
                 vitri.Y = ms.Y;
+
+            }
 
             KeepSpaceShip();
 
@@ -166,17 +182,17 @@ namespace StarWar_V1._0_byNHS
             {
                 sound.bulletSound.Play();
                 Bullet newBullet = new Bullet(bulletTexture);
-                newBullet.position = new Vector2(vitri.X+newBullet.texture.Width*2+2,vitri.Y);
+                newBullet.position = new Vector2(vitri.X+newBullet.texture.Width*2-2,vitri.Y);
                
                 newBullet.isVisible = true;
-                if (bulletList.Count()<20)
+                if (bulletList.Count()<15)
                 {
                     bulletList.Add(newBullet);
                 }
             }
             if (bulletDelay==0)
             {
-                bulletDelay = 10;
+                bulletDelay = 15;
             }
 
         }
@@ -185,6 +201,8 @@ namespace StarWar_V1._0_byNHS
         {
             foreach (Bullet item in bulletList)
             {
+                //bao khung hinh bullet de xu ly va cham
+                item.KhungHinh = new Rectangle((int)item.position.X,(int)item.position.Y,item.texture.Width,item.texture.Height);
                 //set moverment for bullet
                 item.position.Y -= item.speed;
                 if (item.position.Y<=0)
