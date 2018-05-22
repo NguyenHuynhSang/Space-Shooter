@@ -29,6 +29,12 @@ namespace StarWar_V1._0_byNHS
         // co hieu khi xet va cham va khung hinh khi ve len GUI xet va cham khi cac khung hinh chong cheo len nhau
         public bool isVaCham;
         public Rectangle KhungHinh,lifeKhungHinh;
+        //DelayShip
+        private bool DelayShip;
+        public bool isVisiable;
+        // điều chỉnh thời gian xuất hiện của  animation
+        public float timer;
+        public float interval;
 
         // Khoi tao mac dinh 1 spaceship
         public SpaceShip()
@@ -40,7 +46,11 @@ namespace StarWar_V1._0_byNHS
             vitri = new Vector2(300,600);
             TocDo = 10;
             isVaCham = false;
-            life = 3;
+            life = ThamSo.playerLife;
+            isVisiable = true;
+            DelayShip = false;
+            timer = 0f;
+            interval = 50f;
         }
 
         //load content
@@ -48,7 +58,7 @@ namespace StarWar_V1._0_byNHS
         public void LoadContent(ContentManager _content)
         {
             // tai len phi thuyen  tu content chi duy nhat 1 image; 
-
+           
             _texture = _content.Load<Texture2D>("spaceship");
             bulletTexture = _content.Load<Texture2D>("bullet");
             lifeTexture = _content.Load<Texture2D>("heart");
@@ -58,15 +68,22 @@ namespace StarWar_V1._0_byNHS
 
         // Draw
         public void Draw(SpriteBatch spriteBatch)
+       
         {
             //ve phi truyen ra GUI
+            if (DelayShip == false)
+            {
+                spriteBatch.Draw(_texture, KhungHinh, Color.White);
+            }
+          
+            //ve trai tim(player life) ra GUI
             for (int i = 0; i < life; i++)
             {
                 lifeKhungHinh = new Rectangle(50 + (i * 50), 5, 40, 40);
                 spriteBatch.Draw(lifeTexture, lifeKhungHinh, Color.White);
             }
             
-            spriteBatch.Draw(_texture,KhungHinh, Color.White);
+          
             foreach (Bullet item in bulletList)
             {
                 item.Draw(spriteBatch);
@@ -75,11 +92,33 @@ namespace StarWar_V1._0_byNHS
         }
        // sua loi ship bi delay khi nguoi dung nhan phim, hoac phim va chuot cung luc
         bool Moflag = false;
+        private int templife=3;
         // Update
+        float second = 0;
         public void Update(GameTime gameTime)
         {
-           
+            DelayShip = false;
+            timer += (float)gameTime.ElapsedGameTime.Milliseconds;
             
+            if (timer > interval && life<templife)
+            {
+                DelayShip = true;
+                timer = 0f;
+                second += (float)gameTime.ElapsedGameTime.TotalSeconds;
+                templife = life;
+
+
+            }
+            //if (second > 2f)
+            //{
+            //    DelayShip = false;
+            //    second = 0f;
+            //    templife = -10;
+            //    //timer = 0f;
+            //}
+
+            //so frame trong content explosion animation
+
             KhungHinh = new Rectangle((int)vitri.X, (int)vitri.Y, _texture.Width/5+5, _texture.Height/5+5);
             Moflag = false;
             MouseState ms = Mouse.GetState();

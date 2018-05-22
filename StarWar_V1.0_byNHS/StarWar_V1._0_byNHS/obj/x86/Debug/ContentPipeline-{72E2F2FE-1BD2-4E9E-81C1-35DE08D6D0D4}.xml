@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\spaceship2.xnb</Output>
-      <Time>2018-05-17T12:15:10.7374684+07:00</Time>
+      <Time>2018-05-21T11:06:06.7185828+07:00</Time>
     </Item>
     <Item>
       <Source>spaceship1.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\spaceship1.xnb</Output>
-      <Time>2018-05-20T18:02:27.8148813+07:00</Time>
+      <Time>2018-05-21T11:06:06.7135806+07:00</Time>
     </Item>
     <Item>
       <Source>spaceship.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\spaceship.xnb</Output>
-      <Time>2018-05-20T14:17:54.3681207+07:00</Time>
+      <Time>2018-05-21T15:06:13.2912241+07:00</Time>
     </Item>
     <Item>
       <Source>space.png</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\space.xnb</Output>
-      <Time>2018-05-17T14:01:31.1136751+07:00</Time>
+      <Time>2018-05-21T11:06:06.7125803+07:00</Time>
     </Item>
     <Item>
       <Source>bullet.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\bullet.xnb</Output>
-      <Time>2018-05-17T14:56:31.8215776+07:00</Time>
+      <Time>2018-05-21T11:06:06.6735386+07:00</Time>
     </Item>
     <Item>
       <Source>bulletsound.wav</Source>
@@ -53,17 +53,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\bulletsound.xnb</Output>
-      <Time>2018-05-17T16:59:17.3788903+07:00</Time>
-    </Item>
-    <Item>
-      <Source>lactroi.MP3</Source>
-      <Name>lactroi</Name>
-      <Importer>Mp3Importer</Importer>
-      <Processor>SongProcessor</Processor>
-      <Options>None</Options>
-      <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\lactroi.xnb</Output>
-      <Extra>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\lactroi.wma</Extra>
-      <Time>2018-05-17T18:35:01.0436722+07:00</Time>
+      <Time>2018-05-21T11:06:06.6735386+07:00</Time>
     </Item>
     <Item>
       <Source>asteroid.png</Source>
@@ -72,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\asteroid.xnb</Output>
-      <Time>2018-05-20T14:14:59.8022101+07:00</Time>
+      <Time>2018-05-21T11:06:06.6735386+07:00</Time>
     </Item>
     <Item>
       <Source>heart.png</Source>
@@ -81,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\heart.xnb</Output>
-      <Time>2018-05-20T14:38:16.1161907+07:00</Time>
+      <Time>2018-05-21T11:06:06.6745389+07:00</Time>
     </Item>
     <Item>
       <Source>4.wav</Source>
@@ -90,7 +80,7 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\4.xnb</Output>
-      <Time>2018-05-20T16:11:31.6738257+07:00</Time>
+      <Time>2018-05-21T11:06:06.6534085+07:00</Time>
     </Item>
     <Item>
       <Source>enermyship.png</Source>
@@ -99,7 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\enermyship.xnb</Output>
-      <Time>2018-05-20T19:11:38.2857677+07:00</Time>
+      <Time>2018-05-21T18:45:52.3757197+07:00</Time>
     </Item>
     <Item>
       <Source>ebullet.png</Source>
@@ -108,7 +98,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\ebullet.xnb</Output>
-      <Time>2018-05-20T19:45:32.3488558+07:00</Time>
+      <Time>2018-05-21T11:06:06.6735386+07:00</Time>
     </Item>
     <Item>
       <Source>3.wav</Source>
@@ -117,16 +107,44 @@
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
       <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\3.xnb</Output>
-      <Time>2018-05-20T19:51:45.4288546+07:00</Time>
+      <Time>2018-05-21T11:06:06.6534085+07:00</Time>
     </Item>
     <Item>
-      <Source>5.wav</Source>
-      <Name>5</Name>
+      <Source>6.wav</Source>
+      <Name>6</Name>
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\5.xnb</Output>
-      <Time>2018-05-20T20:03:53.9872922+07:00</Time>
+      <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\6.xnb</Output>
+      <Time>2018-05-21T11:13:10.8878919+07:00</Time>
+    </Item>
+    <Item>
+      <Source>bg.MP3</Source>
+      <Name>bg</Name>
+      <Importer>Mp3Importer</Importer>
+      <Processor>SongProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\bg.xnb</Output>
+      <Extra>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\bg.wma</Extra>
+      <Time>2018-05-21T11:49:19.0702845+07:00</Time>
+    </Item>
+    <Item>
+      <Source>explosion_anim.png</Source>
+      <Name>explosion_anim</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\explosion_anim.xnb</Output>
+      <Time>2018-05-21T12:08:09.5033493+07:00</Time>
+    </Item>
+    <Item>
+      <Source>spaceship3.png</Source>
+      <Name>spaceship3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\spaceship3.xnb</Output>
+      <Time>2018-05-21T18:48:40.0645378+07:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

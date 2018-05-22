@@ -34,8 +34,8 @@ namespace StarWar_V1._0_byNHS
             bulletSound = _content.Load<SoundEffect>("bulletsound");
             ebulletSound = _content.Load<SoundEffect>("3");
             asteroidexplosion = _content.Load<SoundEffect>("4");
-            getshooted= _content.Load<SoundEffect>("5");
-            bgMusic = _content.Load<Song>("lactroi");
+            getshooted= _content.Load<SoundEffect>("6");
+            bgMusic = _content.Load<Song>("bg");
         }
 
     }

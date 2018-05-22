@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using System.Threading;
 
 namespace StarWar_V1._0_byNHS
 {
@@ -26,15 +27,17 @@ namespace StarWar_V1._0_byNHS
         Map gameMap = new Map();
         List<Asteroid> listAstoroid = new List<Asteroid>();
         List<Enermy> listEnermy = new List<Enermy>();
+        List<Explosion> exploi = new List<Explosion>();
         SoundManager sm = new SoundManager();
 
         //constructor mac dinh
+      
 
 
         public Game1()
         {
-            
 
+            
             graphics = new GraphicsDeviceManager(this);
             // set kich thuoc Screen game window khi bat dau game
             graphics.IsFullScreen = false;
@@ -45,7 +48,6 @@ namespace StarWar_V1._0_byNHS
 
             //set vi tri mac dinh cua cursors khi vao game
             Mouse.SetPosition(600, 600);
-           
             
         }
 
@@ -99,6 +101,9 @@ namespace StarWar_V1._0_byNHS
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+
+            
+
             //Cap nhat moi thien thach trong danh sach
             foreach (Asteroid a in listAstoroid)
             {
@@ -118,6 +123,7 @@ namespace StarWar_V1._0_byNHS
                 {
                     if (item.KhungHinh.Intersects(myShip.bulletList[i].KhungHinh))
                     {
+                        exploi.Add(new Explosion(Content.Load<Texture2D>("explosion_anim"), new Vector2(item.position.X, item.position.Y)));
                         item.isVisable = false;
                         myShip.bulletList[i].isVisible = false;
                         sm.asteroidexplosion.Play(); 
@@ -129,6 +135,12 @@ namespace StarWar_V1._0_byNHS
             //xu ly va cham giua enermy va spaceship
             foreach (Enermy e in listEnermy)
             {
+
+                if (e.enermyshooting==true)
+                {
+                    sm.ebulletSound.Play();
+                }
+
                 if (e.KhungHinh.Intersects(myShip.KhungHinh))
                 {
                     e.isVisable = false;
@@ -138,18 +150,21 @@ namespace StarWar_V1._0_byNHS
                 // xu ly va cham giua enermy bullet va spaceship 
                 for (int i = 0; i <e.dsBullet.Count ; i++)
                 {
+
                     if (myShip.KhungHinh.Intersects(e.dsBullet[i].KhungHinh))
                     {
+                        exploi.Add(new Explosion(Content.Load<Texture2D>("explosion_anim"), new Vector2(myShip.vitri.X+myShip._texture.Width/6-10, myShip.vitri.Y+myShip._texture.Height/6-10)));
                         myShip.life--;
                         e.dsBullet[i].isVisible = false;
                         sm.getshooted.Play();
                     }
                 }
-                //xy ly va cham giua spaceship va enermy
+                //xy ly va cham giua bullet spaceship va enermy
                 for (int i = 0; i < myShip.bulletList.Count(); i++)
                 {
                     if (myShip.bulletList[i].KhungHinh.Intersects(e.KhungHinh))
                     {
+                        exploi.Add(new Explosion(Content.Load<Texture2D>("explosion_anim"), new Vector2(e.position.X+e.texture.Width/2, e.position.Y)));
                         myShip.bulletList[i].isVisible = false;
                         e.isVisable = false;
                         sm.getshooted.Play();
@@ -157,9 +172,13 @@ namespace StarWar_V1._0_byNHS
                 }
                 e.Update(gameTime);
             }
-           
+            foreach (Explosion ex in exploi)
+            {
+                ex.update(gameTime);
+            }
 
             // TODO: Add your update logic here
+            LoadExplosion();
             myShip.Update(gameTime);
            
             gameMap.Update(gameTime);
@@ -178,6 +197,10 @@ namespace StarWar_V1._0_byNHS
             spriteBatch.Begin();
             gameMap.Draw(spriteBatch);
             myShip.Draw(spriteBatch);
+            foreach (Explosion ex in exploi)
+            {
+                ex.Draw(spriteBatch);
+            }
             foreach (Asteroid a in listAstoroid)
             {
                 a.Draw(spriteBatch);
@@ -240,18 +263,18 @@ namespace StarWar_V1._0_byNHS
         public void LoadEnermy()
         {
             //remove astoroid neu no chay het man hinh GUI, neu k remove astoroid se chay mai khong add them duoc
-            //if (listAstoroid != null)
-            //{
-            //    for (int i = 0; i < listAstoroid.Count(); i++)
-            //    {
-            //        if (listAstoroid[i].position.Y > ThamSo.WindownHeight + 10)
-            //        {
-            //            listAstoroid.RemoveAt(i);
-            //            //luc nay so luong i se giam di i;
-            //            i--;
-            //        }
-            //    }
-            //}
+            if (listAstoroid != null)
+            {
+                for (int i = 0; i < listAstoroid.Count(); i++)
+                {
+                    if (listAstoroid[i].position.Y > ThamSo.WindownHeight + 10)
+                    {
+                        listAstoroid.RemoveAt(i);
+                        //luc nay so luong i se giam di i;
+                        i--;
+                    }
+                }
+            }
             int rankx = rank.Next(0, ThamSo.WindowWidth);
             int ranky = rank.Next(-ThamSo.WindownHeight / 2, -50);
 
@@ -271,6 +294,20 @@ namespace StarWar_V1._0_byNHS
                 if (!listEnermy[i].isVisable)
                 {
                     listEnermy.RemoveAt(i);
+                    //luc nay so luong i se giam di i;
+                    i--;
+                }
+
+            }
+        }
+
+        public void LoadExplosion()
+        {
+            for (int i = 0; i < exploi.Count(); i++)
+            {
+                if (!exploi[i].isVisable)
+                {
+                    exploi.RemoveAt(i);
                     //luc nay so luong i se giam di i;
                     i--;
                 }

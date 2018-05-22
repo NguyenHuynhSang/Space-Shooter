@@ -28,8 +28,6 @@ D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\
 D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\space.xnb
 D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\bullet.xnb
 D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\bulletsound.xnb
-D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\lactroi.xnb
-D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\lactroi.wma
 D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\StarWar_V1._0_byNHS.exe
 D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\StarWar_V1._0_byNHS.pdb
 D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Microsoft.Xna.Framework.dll
@@ -52,4 +50,8 @@ D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\
 D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\enermyship.xnb
 D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\ebullet.xnb
 D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\3.xnb
-D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\5.xnb
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\6.xnb
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\bg.xnb
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\bg.wma
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\explosion_anim.xnb
+D:\Git\XNAGameV1.0\StarWar_V1.0_byNHS\StarWar_V1._0_byNHS\bin\x86\Debug\Content\spaceship3.xnb

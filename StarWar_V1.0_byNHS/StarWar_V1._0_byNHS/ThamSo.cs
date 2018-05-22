@@ -13,6 +13,7 @@ namespace StarWar_V1._0_byNHS
         public static int TocDoLoadMap=5;
 
         public static int SoluongAsteroid = 8;
-        public static int SoluongEnermy = 5;
+        public static int SoluongEnermy = 1;
+        public static int playerLife = 3;
     }
 }

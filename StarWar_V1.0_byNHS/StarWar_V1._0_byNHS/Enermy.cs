@@ -17,7 +17,7 @@ namespace StarWar_V1._0_byNHS
         public int speed, bulletdelay;
         public bool isVisable;
         public List<Bullet> dsBullet;
-     
+        public bool enermyshooting = false;
 
 
         //contructer
@@ -38,25 +38,30 @@ namespace StarWar_V1._0_byNHS
 
         public void Update(GameTime gameTime)
         {
-            KhungHinh = new Rectangle((int)position.X,(int)position.Y,texture.Width-30,texture.Height-30);
+            KhungHinh = new Rectangle((int)position.X,(int)position.Y,texture.Width,texture.Height);
 
             //cap nhat chuyen dong cua phi thuyen dich
 
-            int ranky = rank.Next(-1, 1);
-            position.Y += speed; 
-            // position.X += ranky;
-            //if (position.X==0 )
-            //{
-            //    position.X = 0;
-            //}
-            //if (position.X==ThamSo.WindowWidth)
-            //{
-            //    position.X = ThamSo.WindowWidth;
-            //}
+            int rankx = rank.Next(-2, 2);
+            position.Y += speed;
+            if (position.Y>0)
+            {
+                position.X += rankx;
+                if (position.X <= 0)
+                {
+                    position.X = 0;
+                }
+                if (position.X > ThamSo.WindowWidth)
+                {
+                    position.X = ThamSo.WindowWidth;
+                }
 
-            if (position.Y>=ThamSo.WindownHeight+10)
+            }
+
+            if (position.Y >= ThamSo.WindownHeight + 10) 
             {
                 position.Y = -20;
+                //position.X = rank.Next(0, ThamSo.WindowWidth);
             }
 
 
@@ -104,6 +109,7 @@ namespace StarWar_V1._0_byNHS
 
         public void EnermyShoot()
         {
+            enermyshooting = false;
             if (bulletdelay >= 0)
             {
                 bulletdelay--;
@@ -111,7 +117,7 @@ namespace StarWar_V1._0_byNHS
 
             if (bulletdelay <= 0)
             {
-               
+                enermyshooting = true;
                 Bullet newBullet = new Bullet(bulletTexture);
                 newBullet.position = new Vector2(position.X+75,position.Y+30);
 
@@ -126,7 +132,7 @@ namespace StarWar_V1._0_byNHS
                 bulletdelay = 80;
             }
         }
-
+        
 
 
     }
